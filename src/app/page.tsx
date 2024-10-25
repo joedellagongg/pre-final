@@ -19,7 +19,6 @@ const IdiomList = () => {
     const initialLetterCounts = Array.from({ length: 26 }, (_, i) => ({
         letter: String.fromCharCode(97 + i),
         count: 0,
-        
     }));
 
     const [letterCounts, setLetterCounts] = useState(initialLetterCounts);
@@ -68,10 +67,10 @@ const IdiomList = () => {
     };
 
     return (
-        <div className="flex justify-center bg-black h-screen">
-            <div className="w-[1000px] justify-center">
+        <div className="">
+            <div className=" justify-center">
                 <div className="bg-white p-2">
-                    <div className="mb-4">
+                    <div className="mt-4 mb-4">
                         <input
                             type="number"
                             value={limit}
@@ -83,7 +82,7 @@ const IdiomList = () => {
                         />
                         <button
                             onClick={resetCounts}
-                            className="mt-4 p-2 bg-red-500 text-white rounded"
+                            className="ml-4 p-2 bg-red-500 text-white rounded"
                         >
                             Reset
                         </button>
@@ -119,15 +118,16 @@ const IdiomList = () => {
                         </div>
                     ))}
                 </div>
-                <div className=" flex justify-center p-5  bg-blue-300">
-                    <div className=" ">
+
+                <div className="p-5">
+                    <div className="">
                         <h4 className="font-bold justify-center">
                             Letter Counts:
                         </h4>
-                        <ul className="flex ">
+                        <ul className="">
                             {letterCounts.map(({ letter, count }) => (
                                 <li
-                                    className="text-center m-2 w-5"
+                                    className="float-left  bg-blue-300 text-center m-2 w-5"
                                     key={letter}
                                 >
                                     {letter.toUpperCase()}
