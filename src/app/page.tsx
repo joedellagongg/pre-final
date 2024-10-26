@@ -119,19 +119,20 @@ const IdiomList = () => {
                     ))}
                 </div>
 
-                <div className="p-5">
+                <div className="items-center content-center p-10 bg-blue-300 ">
                     <div className="">
-                        <h4 className="font-bold justify-center">
-                            Letter Counts:
-                        </h4>
+                        <h4 className="font-bold">Letter Counts:</h4>
                         <ul className="">
                             {letterCounts.map(({ letter, count }) => (
                                 <li
-                                    className="float-left  bg-blue-300 text-center m-2 w-5"
+                                    className="float-left font-medium text-center m-3 w-5"
                                     key={letter}
                                 >
                                     {letter.toUpperCase()}
-                                    <p className="" key={count}>
+                                    <p
+                                        className="font-semibold text-[20px]"
+                                        key={count}
+                                    >
                                         {count}
                                     </p>
                                 </li>
